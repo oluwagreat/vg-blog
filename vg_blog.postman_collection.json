@@ -1,0 +1,1445 @@
+{
+	"info": {
+		"_postman_id": "8b2ebdd4-1ea4-417e-819d-f15989e52475",
+		"name": "VG-Blog",
+		"description": "This project is a Laravel-based RESTful API that enables CRUD operations for blogs and posts, with interactive features like liking and commenting on posts.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17528440"
+	},
+	"item": [
+		{
+			"name": "Blogs",
+			"item": [
+				{
+					"name": "Fetch all blogs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch all blogs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Nov 2024 23:44:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Nov 2024 23:44:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Blogs fetched successfully\",\n    \"data\": {\n        \"blogs\": [\n            {\n                \"id\": 2,\n                \"name\": \"Sapiente voluptates vero.\",\n                \"description\": \"Impedit et atque maiores et fugit neque. Et et numquam dolor praesentium. Nemo inventore ut sunt quas amet ex.\",\n                \"slug\": \"sapiente-voluptates-vero\",\n                \"created_at\": \"2024-11-01T23:43:59.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:59.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Exercitationem molestiae et.\",\n                \"description\": \"Vel quasi laboriosam dolorem assumenda est sit repellat. Debitis nihil et eligendi vel placeat. Aut quibusdam sit aspernatur voluptas quo magni officia.\",\n                \"slug\": \"exercitationem-molestiae-et\",\n                \"created_at\": \"2024-11-01T23:43:59.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:59.000000Z\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Maxime molestias et labore.\",\n                \"description\": \"Cupiditate accusamus similique dolorum delectus. Ea placeat pariatur rem. Dolor inventore ea tempora fuga ducimus.\",\n                \"slug\": \"maxime-molestias-et-labore\",\n                \"created_at\": \"2024-11-01T23:43:59.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:59.000000Z\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Veniam animi sit.\",\n                \"description\": \"Voluptas dignissimos voluptatem voluptas est animi est ipsam. Totam repellat architecto placeat consequuntur est rerum. Fugiat beatae recusandae similique dolore.\",\n                \"slug\": \"veniam-animi-sit\",\n                \"created_at\": \"2024-11-01T23:43:59.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:59.000000Z\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Laboriosam illum saepe sit.\",\n                \"description\": \"Distinctio occaecati iste magnam qui odit consectetur est. Sint voluptatem ducimus hic natus. Est est illum minima totam iste dolore fugit.\",\n                \"slug\": \"laboriosam-illum-saepe-sit\",\n                \"created_at\": \"2024-11-01T23:43:59.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:59.000000Z\"\n            },\n            {\n                \"id\": 7,\n                \"name\": \"Quis quibusdam possimus.\",\n                \"description\": \"Nisi rem iure qui soluta. Optio repellendus nesciunt sequi. Quis nesciunt nemo culpa rerum. Repudiandae deserunt eum consequatur eius. Non sit aspernatur ea mollitia quia provident iste.\",\n                \"slug\": \"quis-quibusdam-possimus\",\n                \"created_at\": \"2024-11-01T23:43:59.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:59.000000Z\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"Nesciunt magni qui.\",\n                \"description\": \"Praesentium aut quisquam et laborum. Excepturi quia ut alias omnis non excepturi. Corporis et accusamus ratione cupiditate molestias tenetur.\",\n                \"slug\": \"nesciunt-magni-qui\",\n                \"created_at\": \"2024-11-01T23:43:59.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:59.000000Z\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Dolore qui aspernatur.\",\n                \"description\": \"Corrupti sit ut et. Maiores quo fugit voluptas aut enim quam. Est libero occaecati aspernatur quas est id iste id. Cumque voluptatem fugit quia ratione at quaerat repellat. Est ut tempora error.\",\n                \"slug\": \"dolore-qui-aspernatur\",\n                \"created_at\": \"2024-11-01T23:43:59.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:59.000000Z\"\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Eius qui dignissimos quod.\",\n                \"description\": \"Quidem rerum nihil ex voluptas. Odio expedita vitae pariatur. Possimus qui quasi ab itaque accusamus.\",\n                \"slug\": \"eius-qui-dignissimos-quod\",\n                \"created_at\": \"2024-11-01T23:43:59.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:59.000000Z\"\n            },\n            {\n                \"id\": 1,\n                \"name\": \"Illum consequatur amet libero.\",\n                \"description\": \"Alias eius laborum voluptates esse. Provident ut iste blanditiis officiis et. Corporis maiores natus ipsum atque blanditiis.\",\n                \"slug\": \"illum-consequatur-amet-libero\",\n                \"created_at\": \"2024-11-01T23:43:58.000000Z\",\n                \"updated_at\": \"2024-11-01T23:43:58.000000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"current_page\": 1,\n            \"last_page\": 1,\n            \"per_page\": 20,\n            \"total\": 10,\n            \"first\": \"http://localhost:8000/api/v1/blogs?page=1\",\n            \"last\": \"http://localhost:8000/api/v1/blogs?page=1\",\n            \"prev\": null,\n            \"next\": null\n        }\n    },\n    \"errors\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"{{$randomLoremWords}}\",\r\n    \"description\" : \"{{$randomLoremParagraph}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create new blog",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"dolorem non veniam\",\r\n    \"description\" : \"Exercitationem numquam similique aliquid laborum. Mollitia sequi sunt debitis aut accusamus. Consequatur aut exercitationem qui placeat earum. Aut et qui debitis corporis et et consequatur. Suscipit et aut consequatur recusandae qui saepe. Voluptas aut maxime placeat quam omnis amet aperiam aut inventore.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Nov 2024 23:56:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Nov 2024 23:56:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Blog created successfully\",\n    \"data\": {\n        \"blog\": {\n            \"name\": \"quisquam porro saepe\",\n            \"description\": \"Ipsa quam quia enim repellendus omnis quisquam deleniti consequuntur. Dolor consequuntur in voluptates corporis tenetur et omnis. Est velit repellendus. Necessitatibus laboriosam et cupiditate.\",\n            \"slug\": \"quisquam-porro-saepe\",\n            \"updated_at\": \"2024-11-01T23:56:03.000000Z\",\n            \"created_at\": \"2024-11-01T23:56:03.000000Z\",\n            \"id\": 13\n        }\n    },\n    \"errors\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Blog Details (with Posts)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs/{{blog_id}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"{{blog_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch Blog Details (with Posts)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 00:59:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 00:59:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Blog fetched successfully\",\n    \"data\": {\n        \"blog\": {\n            \"id\": 1,\n            \"name\": \"Illum consequatur amet libero.\",\n            \"description\": \"Alias eius laborum voluptates esse. Provident ut iste blanditiis officiis et. Corporis maiores natus ipsum atque blanditiis.\",\n            \"slug\": \"illum-consequatur-amet-libero\",\n            \"created_at\": \"2024-11-01T23:43:58.000000Z\",\n            \"updated_at\": \"2024-11-01T23:43:58.000000Z\"\n        },\n        \"posts\": [\n            {\n                \"id\": 7,\n                \"title\": \"sunt officia omnis\",\n                \"slug\": \"sunt-officia-omnis\",\n                \"content\": \"Optio assumenda qui esse odit voluptas deserunt deserunt sunt possimus. Accusamus voluptatem ut dolor. Debitis voluptatem nihil. Harum labore inventore voluptatem quos ullam sit reiciendis excepturi sapiente. Nostrum quis magni saepe quia.\\n \\rDoloribus molestias aspernatur earum. Quas mollitia occaecati fugit consequatur. Necessitatibus eligendi consequuntur mollitia id quia voluptatem non minima dolor. Rerum magni corrupti iure perspiciatis ea repellat repudiandae et hic. Cum eos sit aliquam illo velit iure facere accusamus. Voluptas quia adipisci enim eum asperiores beatae nihil tempore.\\n \\rIusto optio inventore. Exercitationem autem porro id est. Sed corporis id.\",\n                \"image_url\": \"http://localhost:8000/public/post-images/sunt-officia-omnis-67257941489ac.jpg\",\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:41\",\n                \"last_updated\": \"2024-11-02 00:58:41\"\n            },\n            {\n                \"id\": 6,\n                \"title\": \"voluptatem autem libero\",\n                \"slug\": \"voluptatem-autem-libero\",\n                \"content\": \"Doloremque non consequatur nulla repudiandae. Adipisci corporis ex inventore dolor rerum facere fugiat ut ut. Aspernatur odio quia sit.\\n \\rQuibusdam maxime quasi mollitia ut et eius. Laboriosam saepe et adipisci ea. Itaque voluptatum recusandae quos ut est id. Earum sint nemo quas quia hic maiores veritatis corporis accusantium.\\n \\rFacere voluptatem in quod vitae. Veniam rerum dolor aut sunt ipsam occaecati. Esse omnis voluptas illo recusandae nulla. Voluptates aliquam excepturi enim perspiciatis error aliquam non aut. Quo perspiciatis illum aut qui dolores cumque autem eum aliquam. Autem ab sit ad rerum iure.\",\n                \"image_url\": \"http://localhost:8000/public/post-images/voluptatem-autem-libero-6725793d50746.jpg\",\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:37\",\n                \"last_updated\": \"2024-11-02 00:58:37\"\n            },\n            {\n                \"id\": 5,\n                \"title\": \"velit eaque et\",\n                \"slug\": \"velit-eaque-et\",\n                \"content\": \"Corrupti suscipit minus quia aut omnis accusamus. Consequatur ipsam sunt architecto. Sequi architecto quia corporis dolor. Esse ut quisquam praesentium corporis aliquid voluptas accusantium aliquam.\\n \\rCupiditate vel et error omnis dolore tempore. Et a sunt sapiente aspernatur nihil eius ullam adipisci doloribus. Qui accusamus ex. Quasi qui consectetur omnis deserunt qui recusandae in laborum.\\n \\rUt sint animi nam id esse aspernatur autem blanditiis a. Deserunt commodi nihil. Assumenda accusamus quia culpa sit vel dolor et. Optio non eius eaque quae minima dignissimos non. Iusto beatae sit perspiciatis libero cum officiis inventore.\",\n                \"image_url\": null,\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:32\",\n                \"last_updated\": \"2024-11-02 00:58:32\"\n            },\n            {\n                \"id\": 4,\n                \"title\": \"ut sed quasi\",\n                \"slug\": \"ut-sed-quasi\",\n                \"content\": \"Alias hic pariatur nobis velit aut voluptas libero minus. Sit vel atque excepturi deleniti accusamus ratione doloremque iure. Sit expedita soluta blanditiis molestiae aut voluptates dolor quidem et. Et dolor non sapiente impedit et praesentium dolorem est. Aut numquam et.\\n \\rLibero esse expedita voluptatem aut vero. Ea consectetur aperiam rerum consequatur et cupiditate eos fuga cupiditate. Fugiat quis temporibus. Expedita pariatur ducimus odit.\\n \\rSit facilis velit culpa reprehenderit dignissimos ipsum quia. Eveniet saepe repudiandae et. Nemo incidunt officiis. Tenetur est quia fugit enim voluptatem enim ut aut.\",\n                \"image_url\": null,\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:29\",\n                \"last_updated\": \"2024-11-02 00:58:29\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"vel accusantium id\",\n                \"slug\": \"vel-accusantium-id\",\n                \"content\": \"Sit numquam est culpa rerum accusamus nostrum sit. Et nostrum occaecati velit reiciendis fugiat eaque inventore. Expedita similique cum sed totam animi est corporis eligendi quasi. Recusandae et provident veniam corporis sint incidunt veniam at blanditiis. Voluptas sunt totam.\\n \\rQuisquam maiores voluptatibus. Est officiis omnis quae et. Nobis non consequatur tenetur impedit. Eum veritatis qui commodi necessitatibus qui eos. Ipsum dolores sapiente minus repudiandae maiores nisi nisi est temporibus.\\n \\rAccusantium odit maiores non minima sit officia voluptatem. Doloremque vel eaque exercitationem voluptatem qui est. Voluptatibus quas necessitatibus eligendi quo. Omnis rerum impedit autem.\",\n                \"image_url\": null,\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:23\",\n                \"last_updated\": \"2024-11-02 00:58:23\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"cum asperiores odio\",\n                \"slug\": \"cum-asperiores-odio\",\n                \"content\": \"Officia provident cumque libero repudiandae omnis distinctio occaecati cum. Perspiciatis dolorum dicta nihil adipisci et. Qui blanditiis laborum veniam nemo. Laboriosam aliquid libero provident. Qui qui laudantium eaque. Voluptatibus ea voluptatem.\\n \\rVoluptatem non ut excepturi tempora. Doloremque voluptatem aut harum. Vel et ipsum aut reiciendis suscipit eligendi beatae earum saepe.\\n \\rAsperiores veniam autem architecto. Dolore ut quis dolores laboriosam voluptate atque aperiam. Officiis pariatur quam nisi magnam rerum et dolorum dolorem occaecati. Corrupti est ad tenetur nulla eum et aspernatur.\",\n                \"image_url\": \"http://localhost:8000/public/post-images/cum-asperiores-odio-6725748b51bf7.jpg\",\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:38:35\",\n                \"last_updated\": \"2024-11-02 00:38:35\"\n            },\n            {\n                \"id\": 1,\n                \"title\": \"molestiae doloremque qui\",\n                \"slug\": \"molestiae-doloremque-qui\",\n                \"content\": \"Doloribus voluptatum recusandae amet vel rem commodi iste. Quod et ea dolorum in assumenda dolores. Aut in natus. Quisquam debitis exercitationem quisquam. Labore commodi veritatis autem voluptatem dolor et maiores. Beatae cumque veritatis animi sit.\\n \\rFuga assumenda quos ea eum delectus temporibus ea. Earum ratione neque excepturi accusantium. Qui omnis nihil aut tempora impedit repudiandae cum molestias.\\n \\rOdit fugit incidunt odio totam accusamus asperiores ut et. Et natus vel velit. Sint sunt saepe eos. Ad fugit illum temporibus voluptates maxime non sint totam. Et animi aliquid sunt et consequatur. Soluta non ut assumenda itaque modi accusantium adipisci atque.\",\n                \"image_url\": null,\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:34:47\",\n                \"last_updated\": \"2024-11-02 00:34:47\"\n            }\n        ],\n        \"pagination\": {\n            \"current_page\": 1,\n            \"last_page\": 1,\n            \"per_page\": 20,\n            \"total\": 7,\n            \"first\": \"http://localhost:8000/api/v1/blogs/1?page=1\",\n            \"last\": \"http://localhost:8000/api/v1/blogs/1?page=1\",\n            \"prev\": null,\n            \"next\": null\n        }\n    },\n    \"errors\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Blog",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"My new blog name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs/{{blog_id}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"{{blog_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Blog",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"My new blog name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 01:14:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 01:14:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Blog updated successfully\",\n    \"data\": {\n        \"blog\": {\n            \"id\": 1,\n            \"name\": \"My new blog name\",\n            \"description\": \"Alias eius laborum voluptates esse. Provident ut iste blanditiis officiis et. Corporis maiores natus ipsum atque blanditiis.\",\n            \"slug\": \"my-new-blog-name\",\n            \"created_at\": \"2024-11-01T23:43:58.000000Z\",\n            \"updated_at\": \"2024-11-02T01:14:21.000000Z\"\n        }\n    },\n    \"errors\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Blog",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs/{{blog_id}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"{{blog_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Blog",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 01:17:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 01:17:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Blog deleted successfully\",\n    \"data\": {},\n    \"errors\": {}\n}"
+						}
+					]
+				}
+			],
+			"description": "- `GET /api/blogs` - Fetch all blogs\n    \n- `POST /api/blogs` - Create a new blog\n    \n- `GET /api/blogs/{id}` - View details of a specific blog and its posts\n    \n- `PUT /api/blogs/{id}` - Update an existing blog\n    \n- `DELETE /api/blogs/{id}` - Delete a blog"
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Comments & Likes",
+					"item": [
+						{
+							"name": "Add Comment to Post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\" : \"{{$randomLoremSentence}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localURL}}/api/v1/posts/{{post_id}}/comment",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"posts",
+										"{{post_id}}",
+										"comment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add Comment to Post",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "vg@123",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"content\" : \"Illo praesentium aliquid assumenda doloremque est.\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/v1/posts/1/comment",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"v1",
+												"posts",
+												"1",
+												"comment"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Nov 2024 02:30:09 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Nov 2024 02:30:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"Comment recorded\",\n    \"data\": {\n        \"comment\": {\n            \"user_id\": 1,\n            \"content\": \"Eum atque sed fugit quis architecto accusantium.\",\n            \"post_id\": 1,\n            \"updated_at\": \"2024-11-02T02:30:09.000000Z\",\n            \"created_at\": \"2024-11-02T02:30:09.000000Z\",\n            \"id\": 2\n        }\n    },\n    \"errors\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Like a Post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{localURL}}/api/v1/posts/{{post_id}}/like",
+									"host": [
+										"{{localURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"posts",
+										"{{post_id}}",
+										"like"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Like a Post",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "vg@123",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8000/api/v1/posts/1/like",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"v1",
+												"posts",
+												"1",
+												"like"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Nov 2024 02:31:23 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Nov 2024 02:31:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"Like recorded\",\n    \"data\": {\n        \"like\": {\n            \"post_id\": 1,\n            \"user_id\": 1,\n            \"updated_at\": \"2024-11-02T02:31:23.000000Z\",\n            \"created_at\": \"2024-11-02T02:31:23.000000Z\",\n            \"id\": 1\n        }\n    },\n    \"errors\": {}\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Create a Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "{{$randomLoremWords}}",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "{{$randomLoremParagraphs}}",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "Nullable",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/ruse.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs/{{blog_id}}/posts",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"{{blog_id}}",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "asperiores tempore mollitia",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "Ipsa possimus dolores laboriosam unde est iusto quidem. Exercitationem aliquid est doloribus ipsam tempore impedit enim odit. Hic eveniet quaerat corporis deleniti deleniti. Voluptates voluptatem ut eveniet unde error dolorum. Culpa rem ea sint.\n \rDolor et accusamus reiciendis eos fuga non harum. Non sed perferendis officia consequuntur omnis molestias dignissimos magni. Iusto a magnam accusantium in. Sunt debitis at qui maxime tempora sed.\n \rNon quae amet. Dolorum repellendus saepe nam eius. Officiis sed reiciendis quis omnis eveniet. Qui voluptates eos commodi itaque odio voluptate quis enim quos. Non voluptate maiores.",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "Nullable",
+											"type": "file",
+											"src": "/C:/Users/HP/Downloads/ruse.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs/1/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs",
+										"1",
+										"posts"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 00:38:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 00:38:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post created successfully\",\n    \"data\": {\n        \"post\": {\n            \"title\": \"cum asperiores odio\",\n            \"content\": \"Officia provident cumque libero repudiandae omnis distinctio occaecati cum. Perspiciatis dolorum dicta nihil adipisci et. Qui blanditiis laborum veniam nemo. Laboriosam aliquid libero provident. Qui qui laudantium eaque. Voluptatibus ea voluptatem.\\n \\rVoluptatem non ut excepturi tempora. Doloremque voluptatem aut harum. Vel et ipsum aut reiciendis suscipit eligendi beatae earum saepe.\\n \\rAsperiores veniam autem architecto. Dolore ut quis dolores laboriosam voluptate atque aperiam. Officiis pariatur quam nisi magnam rerum et dolorum dolorem occaecati. Corrupti est ad tenetur nulla eum et aspernatur.\",\n            \"slug\": \"cum-asperiores-odio\",\n            \"blog_id\": 1,\n            \"updated_at\": \"2024-11-02T00:38:35.000000Z\",\n            \"created_at\": \"2024-11-02T00:38:35.000000Z\",\n            \"id\": 2,\n            \"image_url\": \"http://localhost:8000/public/post-images/cum-asperiores-odio-6725748b51bf7.jpg\"\n        }\n    },\n    \"errors\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "View All Posts in Blog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs/{{blog_id}}/posts",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"{{blog_id}}",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "View All Posts in Blog",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs/1/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs",
+										"1",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 01:29:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 01:29:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Blog posts fetched successfully\",\n    \"data\": {\n        \"posts\": [\n            {\n                \"id\": 7,\n                \"title\": \"sunt officia omnis\",\n                \"slug\": \"sunt-officia-omnis\",\n                \"content\": \"Optio assumenda qui esse odit voluptas deserunt deserunt sunt possimus. Accusamus voluptatem ut dolor. Debitis voluptatem nihil. Harum labore inventore voluptatem quos ullam sit reiciendis excepturi sapiente. Nostrum quis magni saepe quia.\\n \\rDoloribus molestias aspernatur earum. Quas mollitia occaecati fugit consequatur. Necessitatibus eligendi consequuntur mollitia id quia voluptatem non minima dolor. Rerum magni corrupti iure perspiciatis ea repellat repudiandae et hic. Cum eos sit aliquam illo velit iure facere accusamus. Voluptas quia adipisci enim eum asperiores beatae nihil tempore.\\n \\rIusto optio inventore. Exercitationem autem porro id est. Sed corporis id.\",\n                \"image_url\": \"http://localhost:8000/public/post-images/sunt-officia-omnis-67257941489ac.jpg\",\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:41\",\n                \"last_updated\": \"2024-11-02 00:58:41\"\n            },\n            {\n                \"id\": 6,\n                \"title\": \"voluptatem autem libero\",\n                \"slug\": \"voluptatem-autem-libero\",\n                \"content\": \"Doloremque non consequatur nulla repudiandae. Adipisci corporis ex inventore dolor rerum facere fugiat ut ut. Aspernatur odio quia sit.\\n \\rQuibusdam maxime quasi mollitia ut et eius. Laboriosam saepe et adipisci ea. Itaque voluptatum recusandae quos ut est id. Earum sint nemo quas quia hic maiores veritatis corporis accusantium.\\n \\rFacere voluptatem in quod vitae. Veniam rerum dolor aut sunt ipsam occaecati. Esse omnis voluptas illo recusandae nulla. Voluptates aliquam excepturi enim perspiciatis error aliquam non aut. Quo perspiciatis illum aut qui dolores cumque autem eum aliquam. Autem ab sit ad rerum iure.\",\n                \"image_url\": \"http://localhost:8000/public/post-images/voluptatem-autem-libero-6725793d50746.jpg\",\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:37\",\n                \"last_updated\": \"2024-11-02 00:58:37\"\n            },\n            {\n                \"id\": 5,\n                \"title\": \"velit eaque et\",\n                \"slug\": \"velit-eaque-et\",\n                \"content\": \"Corrupti suscipit minus quia aut omnis accusamus. Consequatur ipsam sunt architecto. Sequi architecto quia corporis dolor. Esse ut quisquam praesentium corporis aliquid voluptas accusantium aliquam.\\n \\rCupiditate vel et error omnis dolore tempore. Et a sunt sapiente aspernatur nihil eius ullam adipisci doloribus. Qui accusamus ex. Quasi qui consectetur omnis deserunt qui recusandae in laborum.\\n \\rUt sint animi nam id esse aspernatur autem blanditiis a. Deserunt commodi nihil. Assumenda accusamus quia culpa sit vel dolor et. Optio non eius eaque quae minima dignissimos non. Iusto beatae sit perspiciatis libero cum officiis inventore.\",\n                \"image_url\": null,\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:32\",\n                \"last_updated\": \"2024-11-02 00:58:32\"\n            },\n            {\n                \"id\": 4,\n                \"title\": \"ut sed quasi\",\n                \"slug\": \"ut-sed-quasi\",\n                \"content\": \"Alias hic pariatur nobis velit aut voluptas libero minus. Sit vel atque excepturi deleniti accusamus ratione doloremque iure. Sit expedita soluta blanditiis molestiae aut voluptates dolor quidem et. Et dolor non sapiente impedit et praesentium dolorem est. Aut numquam et.\\n \\rLibero esse expedita voluptatem aut vero. Ea consectetur aperiam rerum consequatur et cupiditate eos fuga cupiditate. Fugiat quis temporibus. Expedita pariatur ducimus odit.\\n \\rSit facilis velit culpa reprehenderit dignissimos ipsum quia. Eveniet saepe repudiandae et. Nemo incidunt officiis. Tenetur est quia fugit enim voluptatem enim ut aut.\",\n                \"image_url\": null,\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:29\",\n                \"last_updated\": \"2024-11-02 00:58:29\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"vel accusantium id\",\n                \"slug\": \"vel-accusantium-id\",\n                \"content\": \"Sit numquam est culpa rerum accusamus nostrum sit. Et nostrum occaecati velit reiciendis fugiat eaque inventore. Expedita similique cum sed totam animi est corporis eligendi quasi. Recusandae et provident veniam corporis sint incidunt veniam at blanditiis. Voluptas sunt totam.\\n \\rQuisquam maiores voluptatibus. Est officiis omnis quae et. Nobis non consequatur tenetur impedit. Eum veritatis qui commodi necessitatibus qui eos. Ipsum dolores sapiente minus repudiandae maiores nisi nisi est temporibus.\\n \\rAccusantium odit maiores non minima sit officia voluptatem. Doloremque vel eaque exercitationem voluptatem qui est. Voluptatibus quas necessitatibus eligendi quo. Omnis rerum impedit autem.\",\n                \"image_url\": null,\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:58:23\",\n                \"last_updated\": \"2024-11-02 00:58:23\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"cum asperiores odio\",\n                \"slug\": \"cum-asperiores-odio\",\n                \"content\": \"Officia provident cumque libero repudiandae omnis distinctio occaecati cum. Perspiciatis dolorum dicta nihil adipisci et. Qui blanditiis laborum veniam nemo. Laboriosam aliquid libero provident. Qui qui laudantium eaque. Voluptatibus ea voluptatem.\\n \\rVoluptatem non ut excepturi tempora. Doloremque voluptatem aut harum. Vel et ipsum aut reiciendis suscipit eligendi beatae earum saepe.\\n \\rAsperiores veniam autem architecto. Dolore ut quis dolores laboriosam voluptate atque aperiam. Officiis pariatur quam nisi magnam rerum et dolorum dolorem occaecati. Corrupti est ad tenetur nulla eum et aspernatur.\",\n                \"image_url\": \"http://localhost:8000/public/post-images/cum-asperiores-odio-6725748b51bf7.jpg\",\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:38:35\",\n                \"last_updated\": \"2024-11-02 00:38:35\"\n            },\n            {\n                \"id\": 1,\n                \"title\": \"molestiae doloremque qui\",\n                \"slug\": \"molestiae-doloremque-qui\",\n                \"content\": \"Doloribus voluptatum recusandae amet vel rem commodi iste. Quod et ea dolorum in assumenda dolores. Aut in natus. Quisquam debitis exercitationem quisquam. Labore commodi veritatis autem voluptatem dolor et maiores. Beatae cumque veritatis animi sit.\\n \\rFuga assumenda quos ea eum delectus temporibus ea. Earum ratione neque excepturi accusantium. Qui omnis nihil aut tempora impedit repudiandae cum molestias.\\n \\rOdit fugit incidunt odio totam accusamus asperiores ut et. Et natus vel velit. Sint sunt saepe eos. Ad fugit illum temporibus voluptates maxime non sint totam. Et animi aliquid sunt et consequatur. Soluta non ut assumenda itaque modi accusantium adipisci atque.\",\n                \"image_url\": null,\n                \"status\": 1,\n                \"blog_id\": 1,\n                \"date_created\": \"2024-11-02 00:34:47\",\n                \"last_updated\": \"2024-11-02 00:34:47\"\n            }\n        ],\n        \"pagination\": {\n            \"current_page\": 1,\n            \"last_page\": 1,\n            \"per_page\": 20,\n            \"total\": 7,\n            \"first\": \"http://localhost:8000/api/v1/blogs/1/posts?page=1\",\n            \"last\": \"http://localhost:8000/api/v1/blogs/1/posts?page=1\",\n            \"prev\": null,\n            \"next\": null\n        }\n    },\n    \"errors\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Post Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs/{{blog_id}}/posts/{{post_id}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"{{blog_id}}",
+								"posts",
+								"{{post_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Fetch Post Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs/1/posts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs",
+										"1",
+										"posts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 02:31:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 02:31:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post fetched successfully\",\n    \"data\": {\n        \"post\": {\n            \"id\": 1,\n            \"title\": \"molestiae doloremque qui\",\n            \"slug\": \"molestiae-doloremque-qui\",\n            \"content\": \"Doloribus voluptatum recusandae amet vel rem commodi iste. Quod et ea dolorum in assumenda dolores. Aut in natus. Quisquam debitis exercitationem quisquam. Labore commodi veritatis autem voluptatem dolor et maiores. Beatae cumque veritatis animi sit.\\n \\rFuga assumenda quos ea eum delectus temporibus ea. Earum ratione neque excepturi accusantium. Qui omnis nihil aut tempora impedit repudiandae cum molestias.\\n \\rOdit fugit incidunt odio totam accusamus asperiores ut et. Et natus vel velit. Sint sunt saepe eos. Ad fugit illum temporibus voluptates maxime non sint totam. Et animi aliquid sunt et consequatur. Soluta non ut assumenda itaque modi accusantium adipisci atque.\",\n            \"image_url\": \"http://localhost:8000/public/post-images/molestiae-doloremque-qui-672587cce9821.jpg\",\n            \"status\": 1,\n            \"blog_id\": 1,\n            \"date_created\": \"2024-11-02 00:34:47\",\n            \"last_updated\": \"2024-11-02 02:00:44\",\n            \"comments\": [\n                {\n                    \"id\": 2,\n                    \"post_id\": 1,\n                    \"user_id\": 1,\n                    \"content\": \"Eum atque sed fugit quis architecto accusantium.\",\n                    \"created_at\": \"2024-11-02T02:30:09.000000Z\",\n                    \"updated_at\": \"2024-11-02T02:30:09.000000Z\"\n                }\n            ],\n            \"likes\": [\n                {\n                    \"id\": 1,\n                    \"post_id\": 1,\n                    \"user_id\": 1,\n                    \"created_at\": \"2024-11-02T02:31:23.000000Z\",\n                    \"updated_at\": \"2024-11-02T02:31:23.000000Z\"\n                }\n            ]\n        }\n    },\n    \"errors\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/ycU543mTabxgkK24fB8ulYb60jtf8Ysg9wmg9ZDy.jpg"
+								},
+								{
+									"key": "title",
+									"value": "Updated Post",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "_method",
+									"value": "patch",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs/{{blog_id}}/posts/{{post_id}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"{{blog_id}}",
+								"posts",
+								"{{post_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/HP/Downloads/ycU543mTabxgkK24fB8ulYb60jtf8Ysg9wmg9ZDy.jpg"
+										},
+										{
+											"key": "title",
+											"value": "Updated Post",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "content",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "_method",
+											"value": "patch",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs/1/posts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs",
+										"1",
+										"posts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 02:00:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 02:00:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post updated successfully\",\n    \"data\": {\n        \"post\": {\n            \"id\": 1,\n            \"title\": \"molestiae doloremque qui\",\n            \"slug\": \"molestiae-doloremque-qui\",\n            \"content\": \"Doloribus voluptatum recusandae amet vel rem commodi iste. Quod et ea dolorum in assumenda dolores. Aut in natus. Quisquam debitis exercitationem quisquam. Labore commodi veritatis autem voluptatem dolor et maiores. Beatae cumque veritatis animi sit.\\n \\rFuga assumenda quos ea eum delectus temporibus ea. Earum ratione neque excepturi accusantium. Qui omnis nihil aut tempora impedit repudiandae cum molestias.\\n \\rOdit fugit incidunt odio totam accusamus asperiores ut et. Et natus vel velit. Sint sunt saepe eos. Ad fugit illum temporibus voluptates maxime non sint totam. Et animi aliquid sunt et consequatur. Soluta non ut assumenda itaque modi accusantium adipisci atque.\",\n            \"image_url\": \"http://localhost:8000/public/post-images/molestiae-doloremque-qui-672587cce9821.jpg\",\n            \"status\": 1,\n            \"blog_id\": 1,\n            \"created_at\": \"2024-11-02T00:34:47.000000Z\",\n            \"updated_at\": \"2024-11-02T02:00:44.000000Z\"\n        }\n    },\n    \"errors\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localURL}}/api/v1/blogs/{{blog_id}}/posts/{{post_id}}",
+							"host": [
+								"{{localURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								"{{blog_id}}",
+								"posts",
+								"{{post_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Post",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "vg@123",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/v1/blogs/1/posts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blogs",
+										"1",
+										"posts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 02:04:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Nov 2024 02:04:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"Post deleted successfully\",\n    \"data\": {},\n    \"errors\": {}\n}"
+						}
+					]
+				}
+			],
+			"description": "GET `/api/blogs/{blog_id}/posts` - View all posts under a specific blog  \nPOST `/api/blogs/{blog_id}/posts` - Create a new post under a specific blog  \nGET `/api/blogs/{blog_id}/posts/{id}` - View details of a specific post and its interactions  \nPUT `/api/blogs/{blog_id}/posts/{id}` - Update an existing post  \nDELETE `/api/blogs/{blog_id}/posts/{id}` - Delete a post"
+		},
+		{
+			"name": "API Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "vg@123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{localURL}}/api/v1/test",
+					"host": [
+						"{{localURL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"test"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "API Status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "vg@123",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"test"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 01 Nov 2024 23:21:53 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 01 Nov 2024 23:21:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"API is working\",\n    \"data\": {},\n    \"errors\": {}\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localURL",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "vg@123",
+			"type": "string"
+		},
+		{
+			"key": "blog_id",
+			"value": "1",
+			"type": "default"
+		},
+		{
+			"key": "post_id",
+			"value": "1",
+			"type": "default"
+		}
+	]
+}
